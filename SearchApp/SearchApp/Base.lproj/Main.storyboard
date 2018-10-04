@@ -12,7 +12,7 @@
         <!--Search iTunes-->
         <scene sceneID="DE2-Uf-CZt">
             <objects>
-                <tableViewController id="hbJ-0D-Suy" sceneMemberID="viewController">
+                <tableViewController id="hbJ-0D-Suy" customClass="SearchTableViewController" customModule="SearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="soE-8c-tNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search iTunes" id="fg1-zV-ljf"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4gb-Wd-ofo" id="iSu-aK-Dgi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M19-Yb-3T7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
