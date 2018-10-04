@@ -34,6 +34,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var inforCompany: UILabel!
     @IBOutlet weak var inforPrice: UILabel!
     
+    
+    let endpoint="https://itunes.apple.com/search"
+    let limit=200
+    let entity="software"
     var filteredArray = [ItunesApp]()
     var shouldShowSearchResults = false
     var appData = [ItunesApp]()
@@ -41,6 +45,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createSearchBar()
+        inforView.layer.cornerRadius = 10
+        inforView.layer.masksToBounds = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,7 +57,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         searchBar.showsCancelButton = false
         searchBar.placeholder = "Enter your search"
         searchBar.delegate = self
-        self.navigationItem.titleView = searchBar
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -124,7 +129,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func fetchData(searchText:String)  {
-        guard let url = URL(string: "https://itunes.apple.com/search?term==\(searchText)&limit=200&entity=software")else {return}
+        guard let url = URL(string: "\(endpoint)?term==\(searchText)&limit=\(limit)&entity=\(entity)")else {return}
         
         let fetchingTask = URLSession.shared.dataTask(with: url){(data, response, error) in
             

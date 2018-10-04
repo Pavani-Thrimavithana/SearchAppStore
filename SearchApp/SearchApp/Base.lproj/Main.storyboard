@@ -14,14 +14,14 @@
         <scene sceneID="DE2-Uf-CZt">
             <objects>
                 <tableViewController id="hbJ-0D-Suy" customClass="SearchTableViewController" customModule="SearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="soE-8c-tNn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" id="soE-8c-tNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" placeholder="Search" id="4gb-Wd-ofo">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="4gb-Wd-ofo">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.53866014090000003" green="0.71546926219999996" blue="0.95858970210000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
@@ -61,7 +61,7 @@
                         <outlet property="inforGenre" destination="Ii0-gX-7Nm" id="gFG-44-dBe"/>
                         <outlet property="inforImage" destination="aTC-y5-zk0" id="nt0-t3-xag"/>
                         <outlet property="inforName" destination="bZN-BB-1Xr" id="JNP-Ok-oN2"/>
-                        <outlet property="inforPrice" destination="Shk-lw-EJd" id="QcE-7J-tTx"/>
+                        <outlet property="inforPrice" destination="nZU-Rf-cLV" id="KNg-H8-AjG"/>
                         <outlet property="inforType" destination="lYj-YM-ftj" id="xKD-vW-LIC"/>
                         <outlet property="inforView" destination="TqA-Pn-u9x" id="zjD-Vw-wIb"/>
                         <outlet property="searchBar" destination="4gb-Wd-ofo" id="iSu-aK-Dgi"/>
@@ -69,11 +69,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M19-Yb-3T7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="TqA-Pn-u9x">
-                    <rect key="frame" x="0.0" y="0.0" width="322" height="266"/>
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="266"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnc-ai-cLw">
-                            <rect key="frame" x="284" y="6" width="30" height="30"/>
+                            <rect key="frame" x="277" y="6" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="X"/>
                             <connections>
@@ -126,9 +126,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shk-lw-EJd">
-                            <rect key="frame" x="264" y="223" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-Rf-cLV">
+                            <rect key="frame" x="264" y="223" width="42" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
