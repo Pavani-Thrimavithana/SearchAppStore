@@ -25,6 +25,15 @@ struct Response: Decodable{
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
+    //MARK: INFO SCREEN
+    @IBOutlet var inforView: UIView!
+    @IBOutlet weak var inforImage: UIImageView!
+    @IBOutlet weak var inforName: UILabel!
+    @IBOutlet weak var inforType: UILabel!
+    @IBOutlet weak var inforGenre: UILabel!
+    @IBOutlet weak var inforCompany: UILabel!
+    @IBOutlet weak var inforPrice: UILabel!
+    
     var filteredArray = [ItunesApp]()
     var shouldShowSearchResults = false
     var appData = [ItunesApp]()
@@ -74,6 +83,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     searchBar.endEditing(true)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = filteredArray[indexPath.row]
+        let imageData:NSData = NSData(contentsOf: URL(string: filteredArray[indexPath.row].artworkUrl100)!)!
+        let image = UIImage(data: imageData as Data)
+        inforImage.image=image!
+        inforName.text=data.trackName
+        inforCompany.text=data.sellerName
+        inforType.text=data.kind
+        inforGenre.text=data.primaryGenreName
+        inforPrice.text=data.formattedPrice
+        inforView.center=view.center
+        view.addSubview(inforView)
+    }
+    
+    @IBAction func closeInforPopUp(_ sender: UIButton) {
+        inforView.removeFromSuperview()
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
        
